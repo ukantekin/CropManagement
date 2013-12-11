@@ -1,0 +1,56 @@
+#menu LI
+{
+	list-style: none;
+	display: inline-block;
+	font-family: Arial;
+	font-size: 15.3pt;
+	padding: 5px;
+	margin-right: 5px;
+}
+#menu UL
+{
+	display: inline-block;
+	padding: 0px;
+	margin: 0px 0px 0px 11px;
+}
+#menu
+{
+	background: #596367;
+	height: 30px;
+}
+#menu LI:hover
+{
+	color: #FCFCFC;
+	background-color: #C9873B;
+	cursor: pointer;
+	border: 1px solid #000000;
+}
+#header
+{
+	background-color: #D3944C;
+	font-size: 21pt;
+	font-family: Arial;
+	text-align: center;
+	height: 35px;
+	padding-top: 10px;
+}
+TABLE#list
+{
+	width: 1080px;
+}
+TABLE#list TR
+{
+	padding-right: 27px;
+	background-color: #EAE9E9;
+}
+TABLE#list TD
+{
+	height: 30px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+TABLE#list TH
+{
+	text-align: left;
+	background-color: #B2A697;
+}

@@ -1,0 +1,29 @@
+<%= form_for(@plantation) do |f| %>
+  <% if @plantation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plantation.errors.count, "error") %> prohibited this plantation from being saved:</h2>
+
+      <ul>
+      <% @plantation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Pname %><br>
+    <%= f.text_field :Pname %>
+  </div>
+  <div class="field">
+    <%= f.label :quality %><br>
+    <%= f.number_field :quality %>
+  </div>
+  <div class="field">
+    <%= f.label :Productid %><br>
+	<%= f.collection_select( :Productid, Product.all, :id, :Prname,:selected => @select_value,:prompt=> true)%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

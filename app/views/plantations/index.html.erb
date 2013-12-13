@@ -1,0 +1,32 @@
+<h1>Listing plantations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pname</th>
+      <th>Quality</th>
+      <th>Farmerid</th>
+      <th>Productid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plantations.each do |plantation| %>
+      <tr>
+        <td><%= plantation.Pname %></td>
+        <td><%= plantation.quality %></td>
+        <td><%= plantation.Productid %></td>
+        <td><%= link_to 'Show', plantation %></td>
+        <td><%= link_to 'Edit', edit_plantation_path(plantation) %></td>
+        <td><%= link_to 'Destroy', plantation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Plantation', new_plantation_path %>
